@@ -19,7 +19,7 @@ export default function LoginPage() {
 
   return (
     <AuthLayout>
-      <h2 className="mb-6 text-2xl font-bold text-white">Patient Login</h2>
+      <h2 className="mb-6 text-2xl font-bold text-white">User Login</h2>
       <form onSubmit={onSubmit} className="space-y-4">
         <div>
           <label className="mb-1 block text-sm text-zinc-400">Email</label>
