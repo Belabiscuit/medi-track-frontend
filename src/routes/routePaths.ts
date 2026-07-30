@@ -1,0 +1,40 @@
+import type { Role } from '@/lib/constants'
+
+export const ROUTES = {
+  LOGIN: '/login',
+  REGISTER: '/register',
+  ADMIN_LOGIN: '/admin/login',
+  ADMIN_SIGNUP: '/admin/signup',
+  PATIENT_DASHBOARD: '/patient/dashboard',
+  PATIENT_APPOINTMENTS: '/patient/appointments',
+  PATIENT_MEDICAL_RECORDS: '/patient/medical-records',
+  PATIENT_PRESCRIPTIONS: '/patient/prescriptions',
+  PATIENT_INSURANCE: '/patient/insurance',
+  PATIENT_PROFILE: '/patient/profile',
+  DOCTOR_DASHBOARD: '/doctor/dashboard',
+  DOCTOR_SCHEDULE: '/doctor/schedule',
+  DOCTOR_APPOINTMENTS: '/doctor/appointments',
+  DOCTOR_PATIENTS: '/doctor/patients',
+  DOCTOR_MEDICAL_RECORDS: '/doctor/medical-records',
+  DOCTOR_PRESCRIPTIONS: '/doctor/prescriptions',
+  PATIENT_DETAIL: '/doctor/patients/:patientId',
+  RECEPTIONIST_DASHBOARD: '/receptionist/dashboard',
+  RECEPTIONIST_APPOINTMENTS: '/receptionist/appointments',
+  RECEPTIONIST_PATIENTS: '/receptionist/patients',
+  RECEPTIONIST_INSURANCE: '/receptionist/insurance',
+  RECEPTIONIST_BOOK_APPOINTMENT: '/receptionist/appointments/book',
+  RECEPTIONIST_CHECK_IN_OUT: '/receptionist/appointments/check-in-out',
+  ADMIN_DASHBOARD: '/admin/dashboard',
+  ADMIN_USERS: '/admin/users',
+  ADMIN_USER_CREATE: '/admin/users/new',
+  ADMIN_USER_EDIT: '/admin/users/:role/:id/edit',
+  ADMIN_ANALYTICS: '/admin/analytics',
+  UNAUTHORIZED: '/unauthorized',
+} as const
+
+export const ROLE_DASHBOARD: Record<Role, string> = {
+  PATIENT: ROUTES.PATIENT_DASHBOARD,
+  DOCTOR: ROUTES.DOCTOR_DASHBOARD,
+  RECEPTIONIST: ROUTES.RECEPTIONIST_DASHBOARD,
+  ADMIN: ROUTES.ADMIN_DASHBOARD,
+}
